@@ -19,7 +19,7 @@
 
 ## For Models: Start Here
 
-You don't need to be a developer to use this.
+You don't need to be a developer to use this. **Don't know what GitHub or a "skill" is?** No problem — [docs/for-models.md](docs/for-models.md) has a full plain-language setup guide for both Claude and ChatGPT. No tech skills required, free accounts work, and it covers how to photograph a paper contract on your phone. Start there.
 
 ### If you have a digital copy of the contract
 
@@ -41,8 +41,6 @@ You don't need a scanner. Claude can read text directly from photos.
 > **If an agency pressures you to sign on the spot and won't let you take the contract to review — that pressure is itself a red flag.** A legitimate agency will give you time.
 
 **Not sure if an agency is legitimate?** Just ask: *"Is [agency name] a legitimate modeling agency?"* — the skill checks against a community-maintained scam list automatically.
-
-**Don't know what GitHub or a "skill" is?** No problem. [docs/for-models.md](docs/for-models.md) has a full plain-language setup guide for both Claude and ChatGPT — no tech skills required, free accounts work, includes photo workflow for paper contracts and a comparison table so you can pick the right tool.
 
 ---
 

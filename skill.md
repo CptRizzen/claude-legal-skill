@@ -1,7 +1,7 @@
 ---
 name: contract-review
 description: Review legal contracts, NDAs, employment agreements, SaaS terms, M&A documents, modeling agency contracts, and talent representation agreements. Identifies unfavorable terms, suggests redlines, and compares to market standards. Use for contract analysis, due diligence, or negotiation prep.
-version: 3.1.0
+version: 3.2.0
 ---
 
 # Contract Review Skill
@@ -15,6 +15,31 @@ Review legal contracts for risks, extract key terms, and suggest redlines. Built
 - User asks about specific clauses, risks, or terms
 - User mentions "modeling contract", "talent agency", "representation agreement", "comp card", "mother agency"
 - User is a model, talent, or creative professional reviewing a representation agreement
+
+---
+
+## Step 0: Known Scam Agency Check
+
+**Before any other analysis**, check if the counterparty agency name matches any entry in the Known Scam Agency List (see bottom of this skill).
+
+If a match is found, display this block prominently at the very top of the output, before all other sections:
+
+```markdown
+## 🚨 SCAM AGENCY WARNING
+
+**[Agency Name] appears on the r/MODELING community scam list.**
+
+Category: [insert category from list]
+Notes: [insert any notes from the list entry]
+
+This agency has been flagged by the modeling community based on word of mouth, Google reviews, and personal experience. Exercise extreme caution. Do NOT sign or pay anything until you have independently verified this agency's legitimacy.
+
+Sources: r/MODELING "The Ultimate Scam Agency List" (reddit.com/r/MODELING/comments/1fif93l)
+
+---
+```
+
+Continue with the standard contract review below the warning. If no match, proceed directly to Step 1.
 
 ---
 
@@ -469,6 +494,78 @@ Check these danger signs FIRST before deep analysis:
 - Illinois: Talent Agency Act regulates fees and payment timing
 - Coogan Law (all US states): Minors must have 15% of gross earnings placed in a blocked trust account; non-compliance = contract voidable
 - International agencies (Paris, Milan, London): Commission structures often 20-30% internationally; cross-border jurisdiction adds enforcement complexity
+
+---
+
+## Known Scam Agency List (Community-Sourced)
+
+> Source: r/MODELING "The Ultimate Scam Agency List" — compiled from word of mouth, Google reviews, and personal experience on the r/MODELING subreddit. Updated periodically.
+> Original post: reddit.com/r/MODELING/comments/1fif93l
+
+Check the counterparty name against this list in Step 0. Partial matches (e.g., "Nine9" matching "Nine9.com") count as a match.
+
+### Category 1 — Require Upfront Payment (Photo Shoot / Classes)
+
+- Nine9 / Nine9.com
+- Empire Models
+- NYLA Talent
+- Preview Models
+- Couture Modeling NY
+- About Faces Modeling (Atlanta, GA)
+- Disstrikkt (Netherlands)
+- New View (Cincinnati, OH)
+- Talent Inc. (remote/cross-country recruit)
+- MAPS / West-38
+- Muse Management / Human Models Portland OR (now operating as Human Models)
+- PMTM Agency Chicago
+- Apollo Model Management / Ivan Andreas
+- Rebeca Scouting
+- Mmg
+- Into-modeling (New York)
+- Evrolida
+- Tresidon
+- Mikes Best Talent Agency
+- Discovery Models
+- Photo Studio Group LLC / Studio One
+- Talent USA
+- Skin I'm In Model and Talent
+- MModels and Talents (Toronto)
+
+### Category 2 — Outright Scams (Will Steal Money and Disappear)
+
+- @sayoriyoshi / @sayoriyoshico (Instagram)
+- Anthony Rhyne (independent modeling recruiter)
+- GlamourFlux (contested)
+- ModelWebsiteHost.com
+
+### Category 3 — Sketchy Based on Gmail Interactions
+
+- Discovery-model / The Photo-Studio Group
+
+### Category 4 — Miscellaneous / Unverified Concerns
+
+- Avidlove (contact: anaiahmonnana@gmail.com)
+- Top Model Europe
+- John Casablancas
+- Nation Management (nationmgmt.com) — reason unknown
+- Rune Modeling
+- Starlight Talent Agency
+- beautifulyou_fashiontour (Instagram) / beautifulmode.com
+- Willy_scouts (Instagram) — possible human trafficking involvement
+- Most unsolicited Instagram DMs offering free/discounted clothing in exchange for posts
+- Note: Legitimate Next Model emails end in @nextmodels.com (with an S) — @nextmodel.com (no S) is fraudulent
+
+### Category 5 — 🚨 DANGEROUS: Sex Trafficking / Sexual Harassment Claims
+
+**If a user mentions any of the following individuals or situations, immediately include a safety warning.**
+
+- **Eugene Khazin** — listed on Backstage
+- **Babak Eftekhari** — profile on IMDb
+- **Adam Chin** — Instagram @svnhng
+- **Individuals impersonating Premier Models London scouts** — If you are unsure, email safety@premiermodelmanagement.com to verify identity before any meeting
+
+**General safety rule to include in output whenever a street-approach or DM-approach is mentioned:**
+> If approached on the street or via DM and asked to model, always ask if someone you know is allowed to accompany you to the shoot or interview. If the answer is no, leave immediately and go to a populated area. Tell friends and family where you are going. Have a location-sharing app active.
 
 ---
 

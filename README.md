@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Compatible-blueviolet)](https://agentskills.io)
 [![CUAD](https://img.shields.io/badge/CUAD-41%20Categories-green)](https://github.com/TheAtticusProject/cuad)
-[![Version](https://img.shields.io/badge/version-3.0.0-blue)]()
+[![Version](https://img.shields.io/badge/version-3.2.0-blue)]()
 
 **Works with:** Claude Code · OpenAI Codex · Cursor · GitHub Copilot · Gemini CLI · [26+ tools](https://agentskills.io)
 
@@ -53,6 +53,7 @@ The result: position-aware review with market benchmarks, document-type checklis
 Analyzes legal contracts and outputs:
 - **Risk assessment** with severity ratings (🔴 Critical / 🟡 Important / 🟢 Acceptable)
 - **Red flags quick scan** — instant danger sign detection
+- **Scam agency check** — automatic warning if the agency appears on the community scam list
 - **Key terms table** with section references
 - **Market standard benchmarks** — how terms compare to industry norms
 - **Negotiability ratings** — what's realistic to change given power dynamics
@@ -126,6 +127,29 @@ Special handling for acquisition agreements:
 - Working capital adjustments
 - Escrow/holdback provisions
 - Employment comp in deal value calculations
+
+### Modeling / Talent Agency Support
+Full checklist for models reviewing representation agreements:
+- Commission rate analysis (15-20% standard; stacked service charges flagged)
+- Physical appearance control clauses (consent requirements)
+- Image & likeness rights duration and "in perpetuity" detection
+- Upfront fee detection (automatic red flag — any amount)
+- Mother agency global commission tail analysis
+- Coogan Law compliance check for minors
+- Jurisdiction notes: NY Art. 11, CA AB 5, IL Talent Agency Act
+- Plain-language model handout: `docs/for-models.md`
+
+### Scam Agency Database
+Automatically checks the counterparty name against a community-sourced list of known scam modeling agencies maintained by r/MODELING. If matched, a prominent warning appears at the top of the review output before any other analysis.
+
+The list includes 30+ agencies organized by category:
+- **Category 1** — agencies requiring upfront fees (scam pattern)
+- **Category 2** — outright scams
+- **Category 3** — sketchy based on communications
+- **Category 4** — unverified concerns
+- **Category 5** — dangerous individuals with trafficking/harassment claims
+
+Source: [r/MODELING "The Ultimate Scam Agency List"](https://www.reddit.com/r/MODELING/comments/1fif93l/the_ultimate_scam_agency_list_updated/)
 
 ---
 

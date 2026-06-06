@@ -170,4 +170,43 @@ A single consultation with an entertainment attorney (typically $150-400/hour) i
 
 ---
 
+---
+
+## Known Scam Agencies (Community-Sourced List)
+
+The following agencies have been flagged by the r/MODELING community on Reddit based on user reports, Google reviews, and personal experience. If an agency you are considering appears on this list, treat it as a serious warning sign and do additional research before engaging.
+
+If you paste a contract from one of these agencies into the AI tool, it will automatically flag the agency name at the top of its review.
+
+Source: [r/MODELING — "The Ultimate Scam Agency List"](https://www.reddit.com/r/MODELING/comments/1fif93l/the_ultimate_scam_agency_list_updated/)
+
+### Agencies That Charge Upfront Fees (Scam Pattern)
+
+Nine9 / Nine9.com, Empire Models, NYLA Talent, Preview Models, Couture Modeling NY, About Faces Modeling (Atlanta), Disstrikkt (Netherlands), New View (Cincinnati), Talent Inc., MAPS/West-38, Muse Management / Human Models Portland OR (now Human Models), PMTM Agency Chicago, Apollo Model Management / Ivan Andreas, Rebeca Scouting, Mmg, Into-modeling (New York), Evrolida, Tresidon, Mikes Best Talent Agency, Discovery Models, Photo Studio Group LLC / Studio One, Talent USA, Skin I'm In Model and Talent, MModels and Talents (Toronto)
+
+### Outright Scams
+
+@sayoriyoshi / @sayoriyoshico (Instagram), Anthony Rhyne (independent recruiter), GlamourFlux (contested), ModelWebsiteHost.com
+
+### Flagged / Unverified Concerns
+
+Avidlove, Top Model Europe, John Casablancas, Nation Management (nationmgmt.com), Rune Modeling, Starlight Talent Agency, beautifulyou_fashiontour / beautifulmode.com, Willy_scouts on Instagram
+
+> **Note on email fraud:** Legitimate Next Model agency emails end in @nextmodels.com (with an S). Emails from @nextmodel.com (no S) are fraudulent.
+
+### 🚨 Individuals with Dangerous / Trafficking-Related Reports
+
+If you are contacted by or have an interaction with any of the following, prioritize your safety and contact local authorities if needed:
+
+- **Eugene Khazin** (Backstage)
+- **Babak Eftekhari** (IMDb)
+- **Adam Chin** (Instagram: @svnhng)
+- **Anyone claiming to be a scout from Premier Models London** — verify by emailing safety@premiermodelmanagement.com before any meeting
+
+### Safety Rule for Street or DM Approaches
+
+If anyone approaches you on the street or via social media DM and asks if you want to model: ask if you are allowed to bring someone you know with you to the shoot or interview. If they say no, leave immediately. Tell someone where you are going. Share your location.
+
+---
+
 *This guide is for informational purposes only. It does not constitute legal advice.*

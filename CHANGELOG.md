@@ -1,5 +1,15 @@
 # Changelog
 
+## [3.2.0] - 2026-06-06
+
+### Added
+- Step 0: Known Scam Agency Check — automatic check before any analysis; displays prominent 🚨 warning if counterparty matches the scam list
+- Known Scam Agency List (community-sourced from r/MODELING) with 30+ agencies in 5 categories including dangerous individual warnings
+- Category 5 safety protocol: trafficking/harassment-flagged individuals with in-skill safety instructions for street/DM approaches
+- Scam agency list added to docs/for-models.md with safety guidance
+- Scam agency database section added to README.md
+- Version badge updated to 3.2.0
+
 ## [3.1.0] - 2026-06-06
 
 ### Added

@@ -42,7 +42,7 @@ You don't need a scanner. Claude can read text directly from photos.
 
 **Not sure if an agency is legitimate?** Just ask: *"Is [agency name] a legitimate modeling agency?"* — the skill checks against a community-maintained scam list automatically.
 
-**Don't know what GitHub or a "skill" is?** No problem. [docs/for-models.md](docs/for-models.md) has a full plain-language setup guide — how to copy the skill text, create a Claude Project (one-time, 5 minutes), and use it from your phone or browser. Free Claude account works.
+**Don't know what GitHub or a "skill" is?** No problem. [docs/for-models.md](docs/for-models.md) has a full plain-language setup guide for both Claude and ChatGPT — no tech skills required, free accounts work, includes photo workflow for paper contracts and a comparison table so you can pick the right tool.
 
 ---
 

@@ -76,9 +76,82 @@ This works the same way — it just means you have to copy and paste the skill e
 
 ### Free vs. Paid Claude
 
-The **free Claude account works** for contract review. You don't need to pay.
+The **free Claude account works** for contract review. You don't need to pay for anything.
+
+- Projects: free
+- Photo uploads (photograph a paper contract): free
+- Text contract review: free
 
 If you're reviewing a very long contract (many pages), a free account may hit limits. In that case, review it in two parts — paste the first half, get the analysis, then do the second half.
+
+---
+
+## Using ChatGPT Instead
+
+ChatGPT works too, but the experience depends on whether you have a free or paid account.
+
+---
+
+### Free ChatGPT account
+
+**What works:** Paste the skill text at the start of any conversation, then paste your contract text.
+
+**What doesn't work on free:** Uploading photos of a paper contract (image reading requires a paid account).
+
+**Steps:**
+
+1. Go to [chatgpt.com](https://chatgpt.com) and sign in or create a free account
+2. Start a new conversation
+3. Open the [skill file](https://raw.githubusercontent.com/CptRizzen/claude-legal-skill/main/skill.md), copy all the text, paste it in first
+4. Then type: "Review this modeling agency contract. I'm the model."
+5. Paste the contract text
+
+You'll need to repeat the paste-skill step each time you start a new conversation on the free plan.
+
+---
+
+### ChatGPT Plus (paid, $20/month)
+
+Paid ChatGPT lets you create a **Custom GPT** — the same idea as a Claude Project. Set it up once and it's always ready.
+
+**Steps to create a Custom GPT:**
+
+1. Go to [chatgpt.com](https://chatgpt.com) and sign in to your Plus account
+2. Click your profile icon → **"My GPTs"** → **"Create a GPT"**
+3. Click **"Configure"** at the top
+4. Set the name to: `Modeling Contract Review`
+5. In the **"Instructions"** box, open the [skill file](https://raw.githubusercontent.com/CptRizzen/claude-legal-skill/main/skill.md), copy all the text, and paste it in
+6. Click **Save** → set visibility to **"Only me"**
+7. Done
+
+From now on, find your custom GPT in the sidebar under "My GPTs" and open it whenever you need a contract review. No pasting required.
+
+**Photo support on ChatGPT Plus:** Yes — GPT-4o can read text from photos. Use the same workflow as the Claude photo option (photograph each page, upload all, send your review request).
+
+---
+
+### Quick comparison: Claude vs. ChatGPT for models
+
+| Feature | Claude (free) | ChatGPT (free) | ChatGPT Plus ($20/mo) |
+|---|---|---|---|
+| One-time setup (Projects/Custom GPT) | ✅ Free | ❌ Not available | ✅ Included |
+| Photograph a paper contract | ✅ Free | ❌ Not available | ✅ Included |
+| Paste contract text per conversation | ✅ Free | ✅ Free | ✅ Included |
+| Cost | Free | Free | $20/month |
+
+**Recommendation for most models:** Use the free Claude account. You get everything — Projects, photo uploads, and contract review — at no cost.
+
+---
+
+## Using Other AI Tools
+
+If you use a different AI assistant (Microsoft Copilot, Google Gemini, Perplexity, etc.), the process is similar:
+
+1. Open the [skill file](https://raw.githubusercontent.com/CptRizzen/claude-legal-skill/main/skill.md) and copy all the text
+2. Paste it at the start of a new conversation
+3. Then paste your contract and ask for a review
+
+Each tool handles persistent instructions differently. Consult your AI tool's documentation for how to save custom instructions so you don't have to paste every time.
 
 ---
 

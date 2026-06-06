@@ -2,7 +2,7 @@
 
 > AI-powered contract review that reads agency agreements the way a lawyer would — catching the clauses that trap models, flagging known scam agencies, and telling you exactly what to push back on before you sign.
 
-[![GitHub stars](https://img.shields.io/github/stars/CptRizzen/claude-legal-skill)](https://github.com/CptRizzen/claude-legal-skill/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/CptRizzen/modeling-contract-review)](https://github.com/CptRizzen/modeling-contract-review/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Compatible-blueviolet)](https://agentskills.io)
 [![CUAD](https://img.shields.io/badge/CUAD-41%20Categories-green)](https://github.com/TheAtticusProject/cuad)
@@ -48,10 +48,10 @@ You don't need a scanner. Claude can read text directly from photos.
 
 ```bash
 # Claude Code
-git clone https://github.com/CptRizzen/claude-legal-skill ~/.claude/skills/contract-review
+git clone https://github.com/CptRizzen/modeling-contract-review ~/.claude/skills/modeling-contract-review
 
 # OpenAI Codex
-git clone https://github.com/CptRizzen/claude-legal-skill ~/.codex/skills/contract-review
+git clone https://github.com/CptRizzen/modeling-contract-review ~/.codex/skills/modeling-contract-review
 
 # Other Agent Skills-compatible tools — clone to your tool's skills directory
 ```
@@ -222,10 +222,10 @@ This skill follows the open [Agent Skills standard](https://agentskills.io) and 
 
 ```bash
 # Claude Code
-git clone https://github.com/CptRizzen/claude-legal-skill ~/.claude/skills/contract-review
+git clone https://github.com/CptRizzen/modeling-contract-review ~/.claude/skills/modeling-contract-review
 
 # OpenAI Codex
-git clone https://github.com/CptRizzen/claude-legal-skill ~/.codex/skills/contract-review
+git clone https://github.com/CptRizzen/modeling-contract-review ~/.codex/skills/modeling-contract-review
 
 # Cursor, Copilot, Gemini CLI, etc.
 # Clone to your tool's skills directory
@@ -233,8 +233,8 @@ git clone https://github.com/CptRizzen/claude-legal-skill ~/.codex/skills/contra
 
 ### Development (Symlink)
 ```bash
-git clone https://github.com/CptRizzen/claude-legal-skill ~/Developer/claude-legal-skill
-ln -s ~/Developer/claude-legal-skill ~/.claude/skills/contract-review
+git clone https://github.com/CptRizzen/modeling-contract-review ~/Developer/modeling-contract-review
+ln -s ~/Developer/modeling-contract-review ~/.claude/skills/modeling-contract-review
 ```
 
 ---
@@ -257,7 +257,7 @@ Based on ContractEval benchmarks, Claude achieves F1 ~0.62 on clause extraction.
 - **For models new to contract review:** [docs/for-models.md](docs/for-models.md) — plain-language guide, scam list, safety guidance
 - **Full example outputs:** [NDA review](examples/nda-review.md) · [SaaS agreement](examples/saas-agreement-review.md) · [M&A deal](examples/ma-agreement-review.md) · [Modeling agency contract](examples/modeling-agency-review.md) · [Balanced agreement](examples/balanced-agreement.md)
 - **Generate Word/PDF redlines:** [legal-redline-tools](https://github.com/evolsb/legal-redline-tools)
-- **Found an issue or want to add an agency to the scam list:** [Open a GitHub issue](https://github.com/CptRizzen/claude-legal-skill/issues)
+- **Found an issue or want to add an agency to the scam list:** [Open a GitHub issue](https://github.com/CptRizzen/modeling-contract-review/issues)
 
 ---
 

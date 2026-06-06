@@ -1,5 +1,5 @@
 ---
-name: contract-review
+name: modeling-contract-review
 description: Review legal contracts, NDAs, employment agreements, SaaS terms, M&A documents, modeling agency contracts, and talent representation agreements. Identifies unfavorable terms, suggests redlines, and compares to market standards. Use for contract analysis, due diligence, or negotiation prep.
 version: 3.2.0
 ---

@@ -16,7 +16,7 @@ The skill is a document that tells Claude exactly how to review modeling contrac
 
 Click this link and it will open a page of plain text:
 
-**[Click here to open the skill file](https://raw.githubusercontent.com/CptRizzen/claude-legal-skill/main/skill.md)**
+**[Click here to open the skill file](https://raw.githubusercontent.com/CptRizzen/modeling-contract-review/main/skill.md)**
 
 Once it opens, select all the text (tap and hold on mobile, or Ctrl+A / Cmd+A on desktop) and copy it.
 
@@ -66,7 +66,7 @@ Claude will automatically use the modeling contract checklist, check the agency 
 You can skip the setup entirely. Every time you want a review:
 
 1. Go to [claude.ai](https://claude.ai) and start a new conversation
-2. Open the [skill file](https://raw.githubusercontent.com/CptRizzen/claude-legal-skill/main/skill.md), copy all the text, paste it into the chat first
+2. Open the [skill file](https://raw.githubusercontent.com/CptRizzen/modeling-contract-review/main/skill.md), copy all the text, paste it into the chat first
 3. Then paste your contract or upload photos
 4. Ask: "Review this modeling agency contract. I'm the model."
 
@@ -102,7 +102,7 @@ ChatGPT works too, but the experience depends on whether you have a free or paid
 
 1. Go to [chatgpt.com](https://chatgpt.com) and sign in or create a free account
 2. Start a new conversation
-3. Open the [skill file](https://raw.githubusercontent.com/CptRizzen/claude-legal-skill/main/skill.md), copy all the text, paste it in first
+3. Open the [skill file](https://raw.githubusercontent.com/CptRizzen/modeling-contract-review/main/skill.md), copy all the text, paste it in first
 4. Then type: "Review this modeling agency contract. I'm the model."
 5. Paste the contract text
 
@@ -120,7 +120,7 @@ Paid ChatGPT lets you create a **Custom GPT** — the same idea as a Claude Proj
 2. Click your profile icon → **"My GPTs"** → **"Create a GPT"**
 3. Click **"Configure"** at the top
 4. Set the name to: `Modeling Contract Review`
-5. In the **"Instructions"** box, open the [skill file](https://raw.githubusercontent.com/CptRizzen/claude-legal-skill/main/skill.md), copy all the text, and paste it in
+5. In the **"Instructions"** box, open the [skill file](https://raw.githubusercontent.com/CptRizzen/modeling-contract-review/main/skill.md), copy all the text, and paste it in
 6. Click **Save** → set visibility to **"Only me"**
 7. Done
 
@@ -147,7 +147,7 @@ From now on, find your custom GPT in the sidebar under "My GPTs" and open it whe
 
 If you use a different AI assistant (Microsoft Copilot, Google Gemini, Perplexity, etc.), the process is similar:
 
-1. Open the [skill file](https://raw.githubusercontent.com/CptRizzen/claude-legal-skill/main/skill.md) and copy all the text
+1. Open the [skill file](https://raw.githubusercontent.com/CptRizzen/modeling-contract-review/main/skill.md) and copy all the text
 2. Paste it at the start of a new conversation
 3. Then paste your contract and ask for a review
 

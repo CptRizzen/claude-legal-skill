@@ -19,16 +19,30 @@
 
 ## For Models: Start Here
 
-You don't need to be a developer to use this. If you have a contract you're unsure about:
+You don't need to be a developer to use this.
+
+### If you have a digital copy of the contract
 
 1. Open [Claude.ai](https://claude.ai) or any AI assistant that has this skill installed
 2. Say: **"Review this modeling agency contract. I'm the model."**
 3. Paste the contract text
 4. Read the output — problems are flagged 🔴 Critical / 🟡 Important / 🟢 Acceptable with specific language to negotiate
 
+### If you're at the agency right now with a paper contract
+
+You don't need a scanner. Claude can read text directly from photos.
+
+1. Open [Claude.ai](https://claude.ai) on your phone
+2. Photograph every page (flat surface, good lighting, full page in frame)
+3. Upload all the photos and send this prompt:
+
+> "Review this modeling agency contract. I'm the model. Check for: upfront fees, commission rate and hidden charges, image and likeness rights duration, physical appearance control clauses, exclusivity scope, payment timeline, exit terms and penalties, and whether any agency names appear on known scam lists."
+
+> **If an agency pressures you to sign on the spot and won't let you take the contract to review — that pressure is itself a red flag.** A legitimate agency will give you time.
+
 **Not sure if an agency is legitimate?** Just ask: *"Is [agency name] a legitimate modeling agency?"* — the skill checks against a community-maintained scam list automatically.
 
-**New to this?** Read [docs/for-models.md](docs/for-models.md) first — it's a plain-language guide covering the 7 things every model should watch for in a contract, red flags, green flags, and when to get an actual lawyer.
+**New to this?** Read [docs/for-models.md](docs/for-models.md) first — plain-language guide covering the 7 things every model should watch for, red flags, green flags, and when to get an actual lawyer.
 
 ---
 

@@ -14,13 +14,15 @@ This is an AI skill (a set of instructions) that teaches Claude Code — an AI c
 
 ## How to Use It
 
+### Option A: You have a digital copy (PDF or Word doc)
+
 **Step 1** — Open Claude Code (or any AI assistant that has this skill installed).
 
 **Step 2** — Tell it who you are and what you have:
 
 > "Review this modeling agency contract. I'm the model."
 
-**Step 3** — Paste the contract text (copy-paste from a PDF or Word doc), or describe the key terms if you only have a verbal offer.
+**Step 3** — Paste the contract text (copy-paste from the PDF or Word doc).
 
 **Step 4** — Read the output. It will flag problems in three levels:
 - 🔴 **Critical** — Do not sign without fixing this
@@ -28,6 +30,24 @@ This is an AI skill (a set of instructions) that teaches Claude Code — an AI c
 - 🟢 **Acceptable** — This is fine as written
 
 **Step 5** — Use the specific "Redline" suggestions it gives you as your negotiation talking points.
+
+---
+
+### Option B: You're at the agency right now with a paper contract
+
+You don't need a scanner or a digital file. Claude can read text from photos.
+
+**Step 1** — Open the [Claude.ai](https://claude.ai) app on your phone (free account works).
+
+**Step 2** — Photograph every page of the contract. Lay it flat, good lighting, get the full page in frame.
+
+**Step 3** — Upload all the photos and send this message:
+
+> "Review this modeling agency contract. I'm the model. Check for: upfront fees, commission rate and hidden charges, image and likeness rights duration, physical appearance control clauses, exclusivity scope, payment timeline, exit terms and penalties, and whether any agency names appear on known scam lists."
+
+**Step 4** — Read the response before you sign anything.
+
+> **Important:** If an agency pressures you to sign on the spot and won't let you take the contract home to review — that pressure itself is a red flag. A legitimate agency will give you time. You are allowed to say: "I'd like to take this home and review it before signing."
 
 ---
 

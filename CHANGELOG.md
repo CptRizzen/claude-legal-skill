@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.1.0] - 2026-06-06
+
+### Added
+- Modeling/Talent Agency Agreement checklist (14 categories: duration, commission, exclusivity, mother agency rights, image/likeness, physical appearance control, upfront fees, expense deductions, payment timing, direct booking, portfolio ownership, exit/termination, post-term non-solicitation, Coogan Law)
+- 8 modeling-specific red flags (upfront fees, >25% commission, "in perpetuity" image rights, physical appearance control, no payment timeline, mother agency self-booked commission, exit penalties, vague service charges)
+- 7 modeling-specific market standard benchmark rows (duration, commission, upfront fees, image rights duration, payment timing, post-term non-solicitation, early exit penalty)
+- Modeling jurisdiction notes (New York Art. 11, California AB 5, Illinois Talent Agency Act, Coogan Law all-US, international agency caveats)
+- Modeling risk categories under Special Provisions section
+- `examples/modeling-agency-review.md` — full sample output for a 3-year exclusive agreement with critical issues
+- `docs/for-models.md` — plain-language handout for models and talent covering the 7 key concerns, tips, green flags, and when to get a real lawyer
+- Modeling/talent agency triggers added to When to Activate section
+
 ## [3.0.0] - 2026-01-26
 
 ### Added

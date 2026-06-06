@@ -1,7 +1,7 @@
 ---
 name: contract-review
-description: Review legal contracts, NDAs, employment agreements, SaaS terms, and M&A documents. Identifies unfavorable terms, suggests redlines, and compares to market standards. Use for contract analysis, due diligence, or negotiation prep.
-version: 3.0.0
+description: Review legal contracts, NDAs, employment agreements, SaaS terms, M&A documents, modeling agency contracts, and talent representation agreements. Identifies unfavorable terms, suggests redlines, and compares to market standards. Use for contract analysis, due diligence, or negotiation prep.
+version: 3.1.0
 ---
 
 # Contract Review Skill
@@ -13,6 +13,8 @@ Review legal contracts for risks, extract key terms, and suggest redlines. Built
 - User mentions "review contract", "analyze agreement", "check this contract"
 - User uploads or references a PDF/DOCX legal document
 - User asks about specific clauses, risks, or terms
+- User mentions "modeling contract", "talent agency", "representation agreement", "comp card", "mother agency"
+- User is a model, talent, or creative professional reviewing a representation agreement
 
 ---
 
@@ -193,6 +195,14 @@ Check these danger signs FIRST before deep analysis:
 | "Sole discretion" language favoring counterparty | No objective standard |
 | Class action waiver + mandatory arbitration | Limited remedies |
 | Asymmetric assignment rights | They can assign, you can't |
+| Any upfront fee (training/listing/comp card/test shoot) | Legitimate agencies earn only on booked work — upfront fees = scam signal |
+| Commission >25% | Industry standard is 15-20%; above 25% is exploitative |
+| "In perpetuity" image/likeness rights | Your face used forever, globally, across all media with no recourse |
+| Physical appearance control without model consent | Agency can require haircut, color, shave, weight change — loss of bodily autonomy |
+| No payment timeline specified | Agency can hold model earnings indefinitely |
+| Mother agency commission on self-booked work | Paying commission on jobs the agency had nothing to do with |
+| Penalty clause for early contract exit | Financially trapped when leaving a bad agency relationship |
+| Vague "service charges" stacked on stated commission | Hidden fees that cut actual take-home below the stated percentage |
 
 ---
 
@@ -275,6 +285,25 @@ Check these danger signs FIRST before deep analysis:
 | Escrow deduction | Auto-pay from proceeds? |
 | Term/termination | Can you exit? |
 | Broker status | BD registered if securities involved? |
+
+### Modeling/Talent Agency Agreement Checklist
+
+| Category | Check For |
+|----------|-----------|
+| Contract Duration | 1-3 years standard; 5+ years = red flag; auto-renewal + required notice period |
+| Commission Rate | 15-20% standard; >25% = red flag; watch for vague "service charges" stacked on top |
+| Exclusivity Scope | Geographic limits? Category limits (fashion vs. commercial vs. runway vs. print)? |
+| Mother Agency Rights | Global commission on ALL work including self-booked? For how long post-termination? |
+| Image & Likeness | Duration, geography, medium; "in perpetuity" or "worldwide all media" = red flag |
+| Physical Appearance Clauses | Can agency require haircuts, coloring, shaving, weight changes without model consent? |
+| Upfront Fees | Any amount for training, listing, comp cards, or test shoots = red flag (scam indicator) |
+| Expense Deductions | What agency deducts from pay (travel, digitals, shipping); capped? itemized? |
+| Payment Timing | When does model receive pay after client pays agency? Net 30-60 is standard |
+| Direct Booking | Can model book direct clients without agency cut? |
+| Portfolio/Test Shoot Ownership | Who owns photos from agency-arranged test shoots? |
+| Exit/Termination | Notice period to exit? Penalty clauses for leaving early? |
+| Post-Termination Non-Solicitation | How long after termination: no working with agency's clients directly? |
+| Coogan Law (if under 18) | Required trust account for minors (15% of gross earnings in blocked account) |
 
 ---
 
@@ -360,6 +389,15 @@ Check these danger signs FIRST before deep analysis:
 - **Sublicensing Rights**
 - **Unilateral Amendment Rights**
 
+### Modeling / Talent Representation
+- Physical Appearance Control (hair, weight, clothing requirements)
+- Image & Likeness Duration and Territory
+- Upfront Fee Requirements
+- Mother Agency Global Commission Tail (post-termination)
+- Coogan Law Compliance (minors — blocked trust account)
+- Expense Deduction Transparency and Caps
+- Direct Booking Prohibition
+
 ---
 
 ## Market Standard Benchmarks
@@ -380,6 +418,13 @@ Check these danger signs FIRST before deep analysis:
 | **Data export** | 90 days, standard format | 30 days | None |
 | **Price increase cap** | CPI or 5% annual | 10% annual | Uncapped |
 | **Cure period** | 30 days | 15 days | None |
+| **Modeling contract duration** | 1-2 years | 3 years | 5+ years |
+| **Agency commission (modeling)** | 15-20% | 20-25% | >25% |
+| **Upfront fees (modeling)** | $0 | Any amount | — |
+| **Image rights duration (modeling)** | Per-project or 1-2 years | 3-5 years | "In perpetuity" |
+| **Payment timing (model paid)** | Net 30-60 from client payment | Net 61-90 | Undefined or Net 90+ |
+| **Post-term non-solicitation (modeling)** | 6-12 months, current clients only | 12-18 months | 2+ years or "all clients" |
+| **Early exit penalty (modeling)** | None or nominal | 1-3 months commission | >3 months or dollar amount |
 
 ---
 
@@ -417,6 +462,13 @@ Check these danger signs FIRST before deep analysis:
 - AAA, JAMS: Standard US commercial
 - SIAC (Singapore), LCIA (London): International, expensive
 - Mandatory + class waiver: Limits remedies significantly
+
+**Modeling / Talent Representation:**
+- California: Strong model protections; AB 5 implications for independent contractor classification; non-competes generally void
+- New York: NY Labor Law Art. 11 requires talent agency licensing; advance fees prohibited by law
+- Illinois: Talent Agency Act regulates fees and payment timing
+- Coogan Law (all US states): Minors must have 15% of gross earnings placed in a blocked trust account; non-compliance = contract voidable
+- International agencies (Paris, Milan, London): Commission structures often 20-30% internationally; cross-border jurisdiction adds enforcement complexity
 
 ---
 

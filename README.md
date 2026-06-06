@@ -1,6 +1,6 @@
 # Contract Review — Agent Skill for Legal Analysis
 
-> AI-powered contract review with CUAD risk detection, market benchmarks, and lawyer-ready redlines
+> AI-powered contract review with CUAD risk detection, market benchmarks, lawyer-ready redlines, and scam agency detection for models and talent
 
 [![GitHub stars](https://img.shields.io/github/stars/evolsb/claude-legal-skill)](https://github.com/evolsb/claude-legal-skill/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -89,6 +89,7 @@ Specialized checklists for each contract type:
 - **Payment/Merchant** — reserves, chargebacks, network rules, auto-debit
 - **M&A** — earnouts, escrow, rep survival, sandbagging
 - **Finder/Broker** — fee tails, covered buyer definitions, joint representation
+- **Modeling/Talent Agency** — commission rate, exclusivity scope, image/likeness rights, physical appearance control, upfront fees, payment timing, exit rights, Coogan Law
 
 ### Market Standard Benchmarks
 Compares terms to industry norms with clear thresholds:
@@ -188,9 +189,17 @@ What are the termination provisions? I'm the customer.
 Review this acquisition agreement - I'm the seller
 
 Check this merchant agreement - what's my chargeback exposure?
+
+Review this modeling agency contract - I'm the model
+
+Does this talent agency contract let them change my appearance without consent?
+
+Is Nine9 a legitimate modeling agency?
 ```
 
 See [examples/](examples/) for full sample outputs.
+
+For models and talent new to contract review, see [docs/for-models.md](docs/for-models.md) — a plain-language guide covering the 7 key things to watch for, a scam agency reference list, and safety guidance.
 
 ---
 
@@ -215,8 +224,9 @@ Based on ContractEval benchmarks, Claude achieves F1 ~0.62 on clause extraction.
 ## Next Steps
 
 - **Need deliverables?** Use [legal-redline-tools](https://github.com/evolsb/legal-redline-tools) to generate tracked-changes `.docx`, redline PDFs, and negotiation memos from the skill's output
-- **Want examples?** See [examples/](examples/) for full sample reviews
-- **Found an issue?** [Open a GitHub issue](https://github.com/evolsb/claude-legal-skill/issues)
+- **Reviewing a modeling contract?** Read [docs/for-models.md](docs/for-models.md) — plain-language guide for models and talent
+- **Want examples?** See [examples/](examples/) for full sample reviews including an [NDA](examples/nda-review.md), [SaaS agreement](examples/saas-agreement-review.md), [M&A deal](examples/ma-agreement-review.md), and [modeling agency contract](examples/modeling-agency-review.md)
+- **Found an issue?** [Open a GitHub issue](https://github.com/CptRizzen/claude-legal-skill/issues)
 
 ## Contact
 

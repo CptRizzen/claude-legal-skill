@@ -170,8 +170,6 @@ A single consultation with an entertainment attorney (typically $150-400/hour) i
 
 ---
 
----
-
 ## Known Scam Agencies (Community-Sourced List)
 
 The following agencies have been flagged by the r/MODELING community on Reddit based on user reports, Google reviews, and personal experience. If an agency you are considering appears on this list, treat it as a serious warning sign and do additional research before engaging.

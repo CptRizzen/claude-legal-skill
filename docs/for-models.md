@@ -4,6 +4,84 @@ This guide is written for models, talent, and creative professionals who want to
 
 ---
 
+## Setting It Up (No Tech Skills Required)
+
+You don't need to install anything, use GitHub, or know what a "skill file" is. Here's how to get this working in Claude in about 5 minutes — once. After that, you just open Claude and go.
+
+---
+
+### Step 1: Get the skill text
+
+The skill is a document that tells Claude exactly how to review modeling contracts. You need to copy it once.
+
+Click this link and it will open a page of plain text:
+
+**[Click here to open the skill file](https://raw.githubusercontent.com/CptRizzen/claude-legal-skill/main/skill.md)**
+
+Once it opens, select all the text (tap and hold on mobile, or Ctrl+A / Cmd+A on desktop) and copy it.
+
+---
+
+### Step 2: Create a Project in Claude
+
+Claude has a feature called **Projects** that lets you save instructions once and use them every time. This is what you want.
+
+**On desktop (claude.ai in a browser):**
+1. Go to [claude.ai](https://claude.ai) and sign in or create a free account
+2. Look for **"Projects"** in the left sidebar and click it
+3. Click **"New Project"**
+4. Name it something like `Contract Review`
+5. You'll see a box that says **"Project instructions"** — click inside it
+6. Paste the skill text you copied in Step 1
+7. Click **Save**
+
+**On the Claude mobile app:**
+1. Open the Claude app and sign in
+2. Tap the menu icon (top left) to find **Projects**
+3. Tap **New Project**, name it `Contract Review`
+4. Find the **Project instructions** section and tap it
+5. Paste the skill text you copied in Step 1
+6. Save
+
+That's it. You only do this once.
+
+---
+
+### Step 3: Use it
+
+From now on, whenever you want to review a contract:
+
+1. Open Claude and go to your **Contract Review** project
+2. Start a new conversation inside that project
+3. Type: **"Review this modeling agency contract. I'm the model."**
+4. Paste the contract text, or upload photos of the contract pages
+5. Read the results
+
+Claude will automatically use the modeling contract checklist, check the agency name against the scam list, and flag anything concerning — because you saved those instructions in the project.
+
+---
+
+### What if you don't want to set up a Project?
+
+You can skip the setup entirely. Every time you want a review:
+
+1. Go to [claude.ai](https://claude.ai) and start a new conversation
+2. Open the [skill file](https://raw.githubusercontent.com/CptRizzen/claude-legal-skill/main/skill.md), copy all the text, paste it into the chat first
+3. Then paste your contract or upload photos
+4. Ask: "Review this modeling agency contract. I'm the model."
+
+This works the same way — it just means you have to copy and paste the skill each time instead of once.
+
+---
+
+### Free vs. Paid Claude
+
+The **free Claude account works** for contract review. You don't need to pay.
+
+If you're reviewing a very long contract (many pages), a free account may hit limits. In that case, review it in two parts — paste the first half, get the analysis, then do the second half.
+
+---
+
 ## What This Is
 
 This is an AI skill (a set of instructions) that teaches Claude Code — an AI coding assistant — to read and analyze legal contracts. When you paste a contract or describe its terms, it flags problems, explains what terms mean in plain English, compares them to industry standards, and suggests specific language to negotiate.

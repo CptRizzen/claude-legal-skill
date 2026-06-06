@@ -42,7 +42,7 @@ You don't need a scanner. Claude can read text directly from photos.
 
 **Not sure if an agency is legitimate?** Just ask: *"Is [agency name] a legitimate modeling agency?"* — the skill checks against a community-maintained scam list automatically.
 
-**New to this?** Read [docs/for-models.md](docs/for-models.md) first — plain-language guide covering the 7 things every model should watch for, red flags, green flags, and when to get an actual lawyer.
+**Don't know what GitHub or a "skill" is?** No problem. [docs/for-models.md](docs/for-models.md) has a full plain-language setup guide — how to copy the skill text, create a Claude Project (one-time, 5 minutes), and use it from your phone or browser. Free Claude account works.
 
 ---
 

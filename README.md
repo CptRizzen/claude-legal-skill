@@ -1,8 +1,8 @@
-# Contract Review — Agent Skill for Legal Analysis
+# Contract Review Skill — AI Protection for Models and Talent
 
-> AI-powered contract review with CUAD risk detection, market benchmarks, lawyer-ready redlines, and scam agency detection for models and talent
+> AI-powered contract review that reads agency agreements the way a lawyer would — catching the clauses that trap models, flagging known scam agencies, and telling you exactly what to push back on before you sign.
 
-[![GitHub stars](https://img.shields.io/github/stars/evolsb/claude-legal-skill)](https://github.com/evolsb/claude-legal-skill/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/CptRizzen/claude-legal-skill)](https://github.com/CptRizzen/claude-legal-skill/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Compatible-blueviolet)](https://agentskills.io)
 [![CUAD](https://img.shields.io/badge/CUAD-41%20Categories-green)](https://github.com/TheAtticusProject/cuad)
@@ -10,50 +10,62 @@
 
 **Works with:** Claude Code · OpenAI Codex · Cursor · GitHub Copilot · Gemini CLI · [26+ tools](https://agentskills.io)
 
-## Quick Install
+---
+
+> **Forked from [evolsb/claude-legal-skill](https://github.com/evolsb/claude-legal-skill) by Chris Sheehan.**
+> The original skill is an excellent general-purpose contract review tool. This fork adds full modeling and talent agency contract support, a community-sourced scam agency database with auto-detection, and a plain-language guide written specifically for models. All original work remains Chris's. Additions are documented in [CHANGELOG.md](CHANGELOG.md).
+
+---
+
+## For Models: Start Here
+
+You don't need to be a developer to use this. If you have a contract you're unsure about:
+
+1. Open [Claude.ai](https://claude.ai) or any AI assistant that has this skill installed
+2. Say: **"Review this modeling agency contract. I'm the model."**
+3. Paste the contract text
+4. Read the output — problems are flagged 🔴 Critical / 🟡 Important / 🟢 Acceptable with specific language to negotiate
+
+**Not sure if an agency is legitimate?** Just ask: *"Is [agency name] a legitimate modeling agency?"* — the skill checks against a community-maintained scam list automatically.
+
+**New to this?** Read [docs/for-models.md](docs/for-models.md) first — it's a plain-language guide covering the 7 things every model should watch for in a contract, red flags, green flags, and when to get an actual lawyer.
+
+---
+
+## Quick Install (Developers)
 
 ```bash
 # Claude Code
-git clone https://github.com/evolsb/claude-legal-skill ~/.claude/skills/contract-review
+git clone https://github.com/CptRizzen/claude-legal-skill ~/.claude/skills/contract-review
 
 # OpenAI Codex
-git clone https://github.com/evolsb/claude-legal-skill ~/.codex/skills/contract-review
+git clone https://github.com/CptRizzen/claude-legal-skill ~/.codex/skills/contract-review
 
 # Other Agent Skills-compatible tools — clone to your tool's skills directory
 ```
 
-## Try It
-
-```
-Review this NDA - I'm the receiving party
-```
-
-### Example Output
-
-![Demo output showing contract review with red flags, risk analysis, and redline suggestions](examples/demo.png)
-
 ---
 
-## Why This Exists
+## Why This Fork Exists
 
-I was reviewing real contracts — NDAs, SaaS agreements, M&A docs, merchant agreements — and wanted AI assistance directly in my coding workflow. So I researched what was available:
+Models get hurt by contracts they don't fully understand. Five-year exclusivity traps. Clauses that let agencies demand haircuts, weight changes, or color without consent. "In perpetuity" image rights that let a company use your face forever. Upfront fees that are just scams. These aren't edge cases — they're common, and they end careers and create real harm.
 
-- **Commercial legal AI** (Kira, Ironclad, LegalOn, Harvey, Spellbook) — enterprise-only, custom quotes, no API access for individual developers
-- **Open source tools** (LexNLP, OpenContracts, LawGlance) — incomplete projects requiring significant integration work, none designed for AI coding assistants
-- **Generic contract checklists** — one-size-fits-all reviews that don't differentiate between an NDA and an M&A agreement, give the same advice to buyers and sellers, and say "negotiate this" without telling you *what to ask for*
+The original skill covers these areas in general terms. This fork goes further for models specifically:
 
-Nothing worked as a drop-in skill. So I built one grounded in the [CUAD dataset](https://github.com/TheAtticusProject/cuad) (41 legal risk categories from 510 real contracts), tested it against actual agreements, and iterated until the output was useful for real negotiations.
-
-The result: position-aware review with market benchmarks, document-type checklists, and actual redline language — not just a list of issues.
+- A 14-category checklist built for modeling and talent agency agreements
+- Auto-detection of known scam agencies before the contract review even starts
+- Specific redline language for the clauses that most affect models
+- Safety warnings for individuals with documented trafficking and harassment claims
+- A handout written for models, not developers
 
 ---
 
 ## What It Does
 
 Analyzes legal contracts and outputs:
+- **Scam agency check** — automatic 🚨 warning if the agency appears on the community scam list, before any other analysis
 - **Risk assessment** with severity ratings (🔴 Critical / 🟡 Important / 🟢 Acceptable)
 - **Red flags quick scan** — instant danger sign detection
-- **Scam agency check** — automatic warning if the agency appears on the community scam list
 - **Key terms table** with section references
 - **Market standard benchmarks** — how terms compare to industry norms
 - **Negotiability ratings** — what's realistic to change given power dynamics
@@ -63,12 +75,11 @@ Analyzes legal contracts and outputs:
 
 ### Generate Deliverables with legal-redline-tools
 
-This skill outputs structured JSON redlines. To produce the tracked-changes Word docs and redline PDFs that lawyers actually send, pair with [**legal-redline-tools**](https://github.com/evolsb/legal-redline-tools):
+This skill outputs structured JSON redlines. To produce tracked-changes Word docs and redline PDFs, pair with [**legal-redline-tools**](https://github.com/evolsb/legal-redline-tools):
 
 ```bash
 pip install git+https://github.com/evolsb/legal-redline-tools.git
 
-# After the skill generates redlines.json:
 legal-redline apply contract.docx redlined.docx \
     --from-json redlines.json \
     --pdf redline.pdf \
@@ -79,8 +90,39 @@ legal-redline apply contract.docx redlined.docx \
 
 ## Features
 
+### Scam Agency Database
+Automatically checks the counterparty agency name against a community-sourced list of known scam modeling agencies from r/MODELING. If matched, a prominent warning appears at the top of the output before any analysis.
+
+The list includes 30+ agencies and individuals organized by category:
+- **Category 1** — agencies requiring upfront fees (scam pattern, 24 entries)
+- **Category 2** — outright scams that steal money and disappear
+- **Category 3** — sketchy based on communications
+- **Category 4** — unverified community concerns
+- **Category 5** — 🚨 dangerous individuals with sex trafficking and sexual harassment claims
+
+Source: [r/MODELING "The Ultimate Scam Agency List"](https://www.reddit.com/r/MODELING/comments/1fif93l/the_ultimate_scam_agency_list_updated/) — community-maintained, updated periodically.
+
+### Modeling / Talent Agency Support
+Full 14-category checklist for models reviewing representation agreements:
+- Contract duration (1-3 years standard; 5+ = red flag)
+- Commission rate analysis (15-20% standard; stacked service charges flagged)
+- Exclusivity scope — geographic and category limits
+- Physical appearance control clauses (consent requirements)
+- Image & likeness rights duration and "in perpetuity" detection
+- Upfront fee detection (automatic red flag — any amount)
+- Mother agency global commission tail analysis
+- Expense deduction transparency and caps
+- Payment timing (Net 30-60 from client payment = standard)
+- Direct booking rights
+- Portfolio and test shoot ownership
+- Exit and termination rights
+- Post-termination non-solicitation scope
+- Coogan Law compliance check for minors
+
+Jurisdiction notes: NY Labor Law Art. 11 (advance fees prohibited), CA AB 5, IL Talent Agency Act, Coogan Law (all US), international agency caveats.
+
 ### Position-Aware Review
-Tell it which party you are (customer, vendor, buyer, seller, receiving party) — the skill adjusts what it flags as risky.
+Tell it which party you are (model, customer, vendor, buyer, seller, receiving party) — the skill adjusts what it flags as risky.
 
 ### Document Type Checklists
 Specialized checklists for each contract type:
@@ -89,36 +131,45 @@ Specialized checklists for each contract type:
 - **Payment/Merchant** — reserves, chargebacks, network rules, auto-debit
 - **M&A** — earnouts, escrow, rep survival, sandbagging
 - **Finder/Broker** — fee tails, covered buyer definitions, joint representation
-- **Modeling/Talent Agency** — commission rate, exclusivity scope, image/likeness rights, physical appearance control, upfront fees, payment timing, exit rights, Coogan Law
+- **Modeling/Talent Agency** — commission, exclusivity, image rights, appearance control, upfront fees, payment timing, exit rights, Coogan Law
 
 ### Market Standard Benchmarks
 Compares terms to industry norms with clear thresholds:
 
 | Provision | Standard | Yellow | Red |
 |-----------|----------|--------|-----|
-| Liability cap | 12 months | 6-11 mo | <6 mo |
+| Modeling contract duration | 1-2 years | 3 years | 5+ years |
+| Agency commission | 15-20% | 20-25% | >25% |
+| Upfront fees | $0 | Any amount | — |
+| Image rights duration | Per-project or 1-2 yr | 3-5 years | "In perpetuity" |
+| Liability cap (SaaS/MSA) | 12 months | 6-11 mo | <6 mo |
 | Auto-renewal notice | 90+ days | 60-89 | <60 |
 | Non-compete | 1-2 years | 3-4 years | 5+ |
 | Rep survival (M&A) | 12-18 mo | 24-30 mo | 36+ mo |
 
 ### Negotiability Ratings
 Tells you what's actually changeable:
-- **High** — Mutual termination, cure periods, data export
-- **Medium** — Liability cap increases, price caps
+- **High** — Mutual termination, cure periods, data export, appearance consent
+- **Medium** — Liability cap increases, price caps, commission rate
 - **Low** — Network rules, regulatory requirements
 
 ### Red Flags Quick Scan
-Instant detection of danger signs:
+Instant detection of danger signs including:
+- Any upfront fee from a modeling agency
+- Commission above 25%
+- "In perpetuity" image/likeness rights
+- Physical appearance control without consent
 - Liability cap < 6 months
 - Uncapped indemnification
 - Unilateral amendment rights
-- Perpetual obligations
 - Offshore jurisdiction (BVI, Cayman)
 
 ### Jurisdiction Awareness
 Flags when governing law affects enforceability:
 - Non-competes void in CA/ND/OK/MN
-- Delaware vs NY vs CA implications
+- NY Labor Law Art. 11 prohibits advance fees from talent agencies
+- Coogan Law (all US): minors require 15% of gross in blocked trust
+- Delaware vs NY vs CA commercial implications
 - Offshore jurisdiction cost/enforcement concerns
 
 ### M&A Support
@@ -129,57 +180,17 @@ Special handling for acquisition agreements:
 - Escrow/holdback provisions
 - Employment comp in deal value calculations
 
-### Modeling / Talent Agency Support
-Full checklist for models reviewing representation agreements:
-- Commission rate analysis (15-20% standard; stacked service charges flagged)
-- Physical appearance control clauses (consent requirements)
-- Image & likeness rights duration and "in perpetuity" detection
-- Upfront fee detection (automatic red flag — any amount)
-- Mother agency global commission tail analysis
-- Coogan Law compliance check for minors
-- Jurisdiction notes: NY Art. 11, CA AB 5, IL Talent Agency Act
-- Plain-language model handout: `docs/for-models.md`
-
-### Scam Agency Database
-Automatically checks the counterparty name against a community-sourced list of known scam modeling agencies maintained by r/MODELING. If matched, a prominent warning appears at the top of the review output before any other analysis.
-
-The list includes 30+ agencies organized by category:
-- **Category 1** — agencies requiring upfront fees (scam pattern)
-- **Category 2** — outright scams
-- **Category 3** — sketchy based on communications
-- **Category 4** — unverified concerns
-- **Category 5** — dangerous individuals with trafficking/harassment claims
-
-Source: [r/MODELING "The Ultimate Scam Agency List"](https://www.reddit.com/r/MODELING/comments/1fif93l/the_ultimate_scam_agency_list_updated/)
-
----
-
-## Installation
-
-This skill follows the open [Agent Skills standard](https://agentskills.io) and works with any compatible tool.
-
-```bash
-# Claude Code
-git clone https://github.com/evolsb/claude-legal-skill ~/.claude/skills/contract-review
-
-# OpenAI Codex
-git clone https://github.com/evolsb/claude-legal-skill ~/.codex/skills/contract-review
-
-# Cursor, Copilot, Gemini CLI, etc.
-# Clone to your tool's skills directory
-```
-
-### Development (Symlink)
-```bash
-git clone https://github.com/evolsb/claude-legal-skill ~/Developer/claude-legal-skill
-ln -s ~/Developer/claude-legal-skill ~/.claude/skills/contract-review
-```
-
 ---
 
 ## Usage Examples
 
 ```
+Review this modeling agency contract - I'm the model
+
+Does this talent agency contract let them change my appearance without my consent?
+
+Is Nine9 a legitimate modeling agency?
+
 Review this NDA for red flags - I'm the receiving party
 
 Analyze the indemnification in this MSA - I'm the vendor
@@ -189,17 +200,30 @@ What are the termination provisions? I'm the customer.
 Review this acquisition agreement - I'm the seller
 
 Check this merchant agreement - what's my chargeback exposure?
-
-Review this modeling agency contract - I'm the model
-
-Does this talent agency contract let them change my appearance without consent?
-
-Is Nine9 a legitimate modeling agency?
 ```
 
-See [examples/](examples/) for full sample outputs.
+---
 
-For models and talent new to contract review, see [docs/for-models.md](docs/for-models.md) — a plain-language guide covering the 7 key things to watch for, a scam agency reference list, and safety guidance.
+## Installation (Developer / AI Tool Setup)
+
+This skill follows the open [Agent Skills standard](https://agentskills.io) and works with any compatible tool.
+
+```bash
+# Claude Code
+git clone https://github.com/CptRizzen/claude-legal-skill ~/.claude/skills/contract-review
+
+# OpenAI Codex
+git clone https://github.com/CptRizzen/claude-legal-skill ~/.codex/skills/contract-review
+
+# Cursor, Copilot, Gemini CLI, etc.
+# Clone to your tool's skills directory
+```
+
+### Development (Symlink)
+```bash
+git clone https://github.com/CptRizzen/claude-legal-skill ~/Developer/claude-legal-skill
+ln -s ~/Developer/claude-legal-skill ~/.claude/skills/contract-review
+```
 
 ---
 
@@ -208,6 +232,7 @@ For models and talent new to contract review, see [docs/for-models.md](docs/for-
 - **Not legal advice** — always have material terms reviewed by qualified counsel
 - **US law focus** — analysis defaults to US; provisions vary by jurisdiction
 - **Context window** — very long contracts may need section-by-section review
+- **Scam list currency** — the scam agency database is community-sourced and may not reflect the most current information; always do independent research
 
 ## Accuracy
 
@@ -215,22 +240,27 @@ Based on ContractEval benchmarks, Claude achieves F1 ~0.62 on clause extraction.
 
 ---
 
+## Resources
+
+- **For models new to contract review:** [docs/for-models.md](docs/for-models.md) — plain-language guide, scam list, safety guidance
+- **Full example outputs:** [NDA review](examples/nda-review.md) · [SaaS agreement](examples/saas-agreement-review.md) · [M&A deal](examples/ma-agreement-review.md) · [Modeling agency contract](examples/modeling-agency-review.md) · [Balanced agreement](examples/balanced-agreement.md)
+- **Generate Word/PDF redlines:** [legal-redline-tools](https://github.com/evolsb/legal-redline-tools)
+- **Found an issue or want to add an agency to the scam list:** [Open a GitHub issue](https://github.com/CptRizzen/claude-legal-skill/issues)
+
+---
+
 ## Credits
 
+**Original skill:**
+- [evolsb/claude-legal-skill](https://github.com/evolsb/claude-legal-skill) by Chris Sheehan — general-purpose contract review built on CUAD, ContractEval, and LegalBench
 - [CUAD Dataset](https://github.com/TheAtticusProject/cuad) — Atticus Project (NeurIPS 2021)
 - [LegalBench](https://hazyresearch.stanford.edu/legalbench/) — Stanford HAI
 - [ContractEval](https://arxiv.org/abs/2303.07389) — Contract understanding benchmarks
 
-## Next Steps
+**Modeling additions (this fork):**
+- Scam agency database sourced from [r/MODELING community](https://www.reddit.com/r/MODELING/comments/1fif93l/the_ultimate_scam_agency_list_updated/)
 
-- **Need deliverables?** Use [legal-redline-tools](https://github.com/evolsb/legal-redline-tools) to generate tracked-changes `.docx`, redline PDFs, and negotiation memos from the skill's output
-- **Reviewing a modeling contract?** Read [docs/for-models.md](docs/for-models.md) — plain-language guide for models and talent
-- **Want examples?** See [examples/](examples/) for full sample reviews including an [NDA](examples/nda-review.md), [SaaS agreement](examples/saas-agreement-review.md), [M&A deal](examples/ma-agreement-review.md), and [modeling agency contract](examples/modeling-agency-review.md)
-- **Found an issue?** [Open a GitHub issue](https://github.com/CptRizzen/claude-legal-skill/issues)
-
-## Contact
-
-Questions or feedback? [Open an issue](https://github.com/evolsb/claude-legal-skill/issues) or email chris@ctsheehan.com.
+---
 
 ## License
 
